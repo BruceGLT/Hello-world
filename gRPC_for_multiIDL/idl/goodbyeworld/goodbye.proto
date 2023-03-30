@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package goodbyeworld;
+
+option go_package = "/idl/goodbyeworld;goodbyeworld";
+
+service GoodbyeWorld {
+    rpc SayGoodbye (GoodbyeRequest) returns (GoodbyeResponse);
+}
+
+message GoodbyeRequest {
+    string name = 1;
+}
+
+message GoodbyeResponse {
+    string message = 1;
+}
